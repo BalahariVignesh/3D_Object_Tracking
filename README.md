@@ -241,8 +241,40 @@ These deviations might be due to the outliers and reflective values taken as Xmi
 ### Frame 17
 ![Lidar Frame 17](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/TTC%20Lidar%20new/19.png)
 
+### TTC LiDAR
+![TTC LiDAR](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/TTC_LiDAR.png)
 ---
 # FP6- Performance Evaluation 2
 This last exercise is about running the different detector / descriptor combinations and looking at the differences in TTC estimation. Find out which methods perform best and also include several examples where camera-based TTC estimation is way off. As with Lidar, describe your observations again and also look into potential reasons. This is the last task in the final project.
 
 The task is complete once all detector / descriptor combinations implemented in previous chapters have been compared with regard to the TTC estimate on a frame-by-frame basis. To facilitate the comparison, a spreadsheet and graph should be used to represent the different TTCs.
+
+### AKAZE Detector Performance
+- AKAZE Detector performs almost consistently with the Lidar TTC Values Data.
+![AKAZE](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/AKAZE.png)
+
+### Brisk Detector Performance
+- Brisk Detector performs well except on the fifth frame due to outliers.
+![Brisk](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/Brisk.png)
+
+### FAST Detector Performance
+- FAST Detector performs consistently except for few values when used along with FREAK and BRISK descriptors.
+![FAST](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/FAST.png)
+
+### Harris Detector Performance
+- Harris Detector fails to perform well and returns most of the TTC values as infinity(I have marked infinity returned values as 1e99 in the excel sheet).
+![Harris](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/Harris.png)
+
+### ORB Detector Performance
+- ORB Detector fails to perform well and returns most of the TTC values as infinity like Harris Detector(I have marked infinity returned values as 1e99 in the excel sheet).
+![ORB](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/ORB.png)
+
+### ShiTomasi Detector Performance
+- ShiTomasi Detector performs consistently except for few values when used along with FREAK and BRISK descriptors.
+![ShiTomasi](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/ShiTomasi.png)
+
+### SIFT Detector Performance
+- SIFT Detector performs the best, and also performs consistently with every other descriptor combination returning almost the same values.
+![SIFT](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/SIFT.png)
+
+The overall tabular data is available at :[Performance_Data](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/TTC_CAMERA.xlsx)
