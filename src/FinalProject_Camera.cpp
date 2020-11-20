@@ -150,7 +150,7 @@ int main(int argc, const char *argv[])
 
         // extract 2D keypoints from current image
         vector<cv::KeyPoint> keypoints; // create empty feature list for current image
-        string detectorType = "SHITOMASI";
+        string detectorType = "SHITOMASI"; //Harris,Fast, Brisk, Orb, Akaze , Sift
 
         if (detectorType.compare("SHITOMASI") == 0)
         {
@@ -285,6 +285,8 @@ int main(int argc, const char *argv[])
                         string windowName = "Final Results : TTC";
                         cv::namedWindow(windowName, 4);
                         cv::imshow(windowName, visImg);
+                        cout<<"TTC Camera "<<ttcCamera<<" s"<<endl;
+                        cout<<"TTC Lidar "<<ttcLidar<<" s"<<endl;
                         cout << "Press key to continue to next frame" << endl;
                         cv::waitKey(0);
                     }
