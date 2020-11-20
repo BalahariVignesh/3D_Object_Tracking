@@ -220,9 +220,27 @@ void computeTTCCamera(std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPo
 
 ---
 # FP5-Performance Evaluation 1
-This exercise is about conducting tests with the final project code, especially with regard to the Lidar part. Look for several examples where you have the impression that the Lidar-based TTC estimate is way off. Once you have found those, describe your observations and provide a sound argumentation why you think this happened.
 
-The task is complete once several examples (2-3) have been identified and described in detail. The assertion that the TTC is off should be based on manually estimating the distance to the rear of the preceding vehicle from a top view perspective of the Lidar points.
+The images read were from 0 to 18 - 19 frames in total. Out of which 18 TTC are calculated.
+Out of all the 18 TTC, 3 of them seem to deviate wildly because of outliers leading to incorrect calculations.
+They are in the tabulation below:
+Frame Number | TTC value
+-------------|----------
+7|34.340420s
+12|-10.853745s
+17|-9.994236s
+
+These deviations might be due to the outliers and reflective values taken as Xmin to calculate the Time To Collision.
+
+### Frame 7
+![Lidar Frame 7](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/TTC%20Lidar%20new/7.png)
+
+### Frame 12
+![Lidar Frame 12](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/TTC%20Lidar%20new/14.png)
+
+### Frame 17
+![Lidar Frame 17](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/TTC%20Lidar%20new/19.png)
+
 ---
 # FP6- Performance Evaluation 2
 This last exercise is about running the different detector / descriptor combinations and looking at the differences in TTC estimation. Find out which methods perform best and also include several examples where camera-based TTC estimation is way off. As with Lidar, describe your observations again and also look into potential reasons. This is the last task in the final project.
