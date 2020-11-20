@@ -242,12 +242,10 @@ These deviations might be due to the outliers and reflective values taken as Xmi
 ![Lidar Frame 17](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/TTC%20Lidar%20new/19.png)
 
 ### TTC LiDAR
+- The Time to Collision predictions computed using LiDAR is represented in the below graph.
 ![TTC LiDAR](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/TTC_LiDAR.png)
 ---
 # FP6- Performance Evaluation 2
-This last exercise is about running the different detector / descriptor combinations and looking at the differences in TTC estimation. Find out which methods perform best and also include several examples where camera-based TTC estimation is way off. As with Lidar, describe your observations again and also look into potential reasons. This is the last task in the final project.
-
-The task is complete once all detector / descriptor combinations implemented in previous chapters have been compared with regard to the TTC estimate on a frame-by-frame basis. To facilitate the comparison, a spreadsheet and graph should be used to represent the different TTCs.
 
 ### AKAZE Detector Performance
 - AKAZE Detector performs almost consistently with the Lidar TTC Values Data.
@@ -277,4 +275,9 @@ The task is complete once all detector / descriptor combinations implemented in 
 - SIFT Detector performs the best, and also performs consistently with every other descriptor combination returning almost the same values.
 ![SIFT](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/SIFT.png)
 
+### Overall Comments
+- I would use SIFT Detector as it performs consistently with all the other descriptors.
+- Also AKAZE Detector works well with its descriptor, which is also an potential candidate.
+
 The overall tabular data is available at :[Performance_Data](https://github.com/BalahariVignesh/3D_Object_Tracking/blob/main/Performance_Graphs/TTC_CAMERA.xlsx)
+> PS: I have marked the infinity values as 1e99 in the excel datasheet for representative purpose.
